@@ -1,7 +1,7 @@
 import React from "react";
 
 const SelectedPlayer = () => {
-  return <div></div>;
+  return <div>selected</div>;
 };
 
 export default SelectedPlayer;
