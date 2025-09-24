@@ -1,0 +1,122 @@
+[
+  {
+    "player_name": "Mahendra Singh Dhoni",
+    "player_country": "India",
+    "player_image": "https://i.ibb.co/0yfrjLF7/MSD.webp",
+    "playing_role": "Wicketkeeper Batsman",
+    "rating": 915,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm medium",
+    "price": "1,200,000 USD"
+  },
+  {
+    "player_name": "Babar Azam",
+    "player_country": "Pakistan",
+    "player_image": "https://i.ibb.co/hFzNswWB/images.jpg",
+    "playing_role": "Batsman",
+    "rating": 890,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "N/A",
+    "price": "950,000 USD"
+  },
+  {
+    "player_name": "Pat Cummins",
+    "player_country": "Australia",
+    "player_image": "https://i.ibb.co/99zv1Dgz/1676865427-pat-cummins.jpg",
+    "playing_role": "Bowler",
+    "rating": 845,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm fast",
+    "price": "800,000 USD"
+  },
+  {
+    "player_name": "Kane Williamson",
+    "player_country": "New Zealand",
+    "player_image": "https://i.ibb.co/Hmrwt8T/licensed-image.jpg",
+    "playing_role": "Batsman",
+    "rating": 870,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm off-break",
+    "price": "850,000 USD"
+  },
+  {
+    "player_name": "Ben Stokes",
+    "player_country": "England",
+    "player_image": "https://i.ibb.co/FbYgvw4s/Ben-Stokes.jpg",
+    "playing_role": "All-rounder",
+    "rating": 885,
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Right-arm fast-medium",
+    "price": "900,000 USD"
+  },
+  {
+    "player_name": "Rashid Khan",
+    "player_country": "Afghanistan",
+    "player_image": "https://i.ibb.co/SDfjxBp0/Rashid.jpg",
+    "playing_role": "All-rounder",
+    "rating": 920,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm leg-break",
+    "price": "980,000 USD"
+  },
+  {
+    "player_name": "Shakib Al Hasan",
+    "player_country": "Bangladesh",
+    "player_image": "https://i.ibb.co/Z6c3fYQB/Shakib.jpg",
+    "playing_role": "All-rounder",
+    "rating": 895,
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Slow left-arm orthodox",
+    "price": "750,000 USD"
+  },
+  {
+    "player_name": "Quinton de Kock",
+    "player_country": "South Africa",
+    "player_image": "https://i.ibb.co/0jD0CRcC/Quinton.webp",
+    "playing_role": "Wicketkeeper Batsman",
+    "rating": 830,
+    "batting_style": "Left-hand bat",
+    "bowling_style": "N/A",
+    "price": "700,000 USD"
+  },
+  {
+    "player_name": "Jason Holder",
+    "player_country": "West Indies",
+    "player_image": "https://i.ibb.co/wq7krqh/Jason-Holder.jpg",
+    "playing_role": "All-rounder",
+    "rating": 810,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm medium-fast",
+    "price": "650,000 USD"
+  },
+  {
+    "player_name": "Wanindu Hasaranga",
+    "player_country": "Sri Lanka",
+    "player_image": "https://i.ibb.co/nMP9XwH7/Wanindu-Hasaranga.webp",
+    "playing_role": "All-rounder",
+    "rating": 860,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm leg-break",
+    "price": "720,000 USD"
+  },
+  {
+    "player_name": "Sikandar Raza",
+    "player_country": "Zimbabwe",
+    "player_image": "https://i.ibb.co/9xBfnD5/Sikandar-Raza.webp",
+    "playing_role": "All-rounder",
+    "rating": 800,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm off-break",
+    "price": "550,000 USD"
+  },
+  {
+    "player_name": "Josh Little",
+    "player_country": "Ireland",
+    "player_image": "https://i.ibb.co/JjvxPGLZ/Josh-Little.webp",
+    "playing_role": "Bowler",
+    "rating": 790,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Left-arm fast-medium",
+    "price": "480,000 USD"
+  }
+]

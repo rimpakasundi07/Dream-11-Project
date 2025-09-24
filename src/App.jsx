@@ -1,10 +1,13 @@
 import "./App.css";
 import React from "react";
 import logo from "./assets/logo.png";
+import dollar from "./assets/icons8-coin-48.png";
+
 function App() {
   return (
     <>
-      <div className="navbar w-11/12 mx-auto py-10 ">
+      {/* navbar section */}
+      <div className="navbar container px-4 mx-auto ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -15,13 +18,12 @@ function App() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {" "}
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                />
               </svg>
             </div>
             <ul
@@ -61,7 +63,11 @@ function App() {
               <a>Schedule</a>
             </li>
           </ul>
-          <a className="btn"> 0 Coin </a>
+          <a className="btn">
+            <span>600000000</span>
+            <span>Coin</span>
+            <img src={dollar} alt="" />
+          </a>
         </div>
       </div>
     </>
