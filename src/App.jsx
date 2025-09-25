@@ -5,6 +5,7 @@ import Availableplayers from "./components/AvailablePlayers/Availableplayers";
 import SelectedPlayer from "./components/AvailablePlayers/SelectedPlayers/SelectedPlayer";
 import Navbar from "./components/AvailablePlayers/Navbar/Navbar";
 import Banner from "./components/AvailablePlayers/Banner/Banner";
+// import { use } from "react";
 
 const fetchPlayers = async () => {
   const res = await fetch("/players.json");
@@ -13,12 +14,15 @@ const fetchPlayers = async () => {
   return data;
 };
 
+const playersPromise = fetchPlayers();
+
 function App() {
   const [toggle, setToggle] = useState(true);
-  const playersPromise = fetchPlayers();
+  const [availableBalance, setAvailableBalance] = useState(6000000000);
+
   return (
     <>
-      <Navbar />
+      <Navbar availableBalance={availableBalance} />
       <Banner />
       <div className=" px-8 container mx-auto flex justify-between items-center ">
         <h1 className="font-bold lg:text-3xl text-xl">Available Players</h1>
@@ -47,7 +51,11 @@ function App() {
             <span className="Loading loading-spinner loading-xl"></span>
           }
         >
-          <Availableplayers playersPromise={playersPromise} />
+          <Availableplayers
+            availableBalance={availableBalance}
+            setAvailableBalance={setAvailableBalance}
+            playersPromise={playersPromise}
+          />
         </Suspense>
       ) : (
         <SelectedPlayer />

@@ -2,9 +2,9 @@ import React from "react";
 import logo from "../../../assets/logo.png";
 import dollar from "../../../assets/icons8-coin-48.png";
 
-const Navbar = () => {
+const Navbar = ({ availableBalance }) => {
   return (
-    <div className="navbar container px-4 mx-auto ">
+    <div className="navbar container bg-white  z-40 fixed px-4 mx-auto ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -61,7 +61,7 @@ const Navbar = () => {
           </li>
         </ul>
         <a className="btn">
-          <span>600000000</span>
+          <span>{availableBalance}</span>
           <span>Coin</span>
           <img src={dollar} alt="" />
         </a>

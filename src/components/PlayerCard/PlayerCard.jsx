@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import flagImg from "../../assets/icons8-flag-50.png";
 import userImg from "../../assets/icons8-user-50.png";
 
-const PlayerCard = ({ player }) => {
+const PlayerCard = ({ player, setAvailableBalance, availableBalance }) => {
   const [isSelected, setIsSelected] = useState(false);
   return (
     <div className="card bg-base-100 p-4 shadow-sm">
@@ -41,7 +41,13 @@ const PlayerCard = ({ player }) => {
           <p className="text-black font-semibold">${player.price}</p>
           <button
             disabled={isSelected}
-            onClick={() => setIsSelected(true)}
+            onClick={() => {
+              setIsSelected(true);
+              setAvailableBalance(
+                availableBalance -
+                  player.price.split("USD").join("").split(",").join("")
+              );
+            }}
             className="btn hover:bg-sky-400 hover:text-white"
           >
             {isSelected === true ? "Selected" : "Choose Player"}
