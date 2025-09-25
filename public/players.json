@@ -9,16 +9,7 @@
     "bowling_style": "Right-arm medium",
     "price": "1,200,000 USD"
   },
-  {
-    "player_name": "Babar Azam",
-    "player_country": "Pakistan",
-    "player_image": "https://i.ibb.co/hFzNswWB/images.jpg",
-    "playing_role": "Batsman",
-    "rating": 890,
-    "batting_style": "Right-hand bat",
-    "bowling_style": "N/A",
-    "price": "950,000 USD"
-  },
+
   {
     "player_name": "Pat Cummins",
     "player_country": "Australia",
@@ -118,5 +109,15 @@
     "batting_style": "Right-hand bat",
     "bowling_style": "Left-arm fast-medium",
     "price": "480,000 USD"
+  },
+  {
+    "player_name": "Babar Azam",
+    "player_country": "Pakistan",
+    "player_image": "https://i.ibb.co/hFzNswWB/images.jpg",
+    "playing_role": "Batsman",
+    "rating": 890,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "N/A",
+    "price": "950,000 USD"
   }
 ]
