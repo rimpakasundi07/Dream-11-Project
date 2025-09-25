@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Banner />
+      {/* <Banner /> */}
       <Suspense>
         <Availableplayers playersPromise={playersPromise} />
       </Suspense>
