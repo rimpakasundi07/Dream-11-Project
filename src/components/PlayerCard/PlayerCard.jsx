@@ -4,6 +4,14 @@ import userImg from "../../assets/icons8-user-50.png";
 
 const PlayerCard = ({ player, setAvailableBalance, availableBalance }) => {
   const [isSelected, setIsSelected] = useState(false);
+
+  const handleSelected = (playerData) => {
+    setIsSelected(true);
+    setAvailableBalance(
+      availableBalance -
+        playerData.price.split("USD").join("").split(",").join("")
+    );
+  };
   return (
     <div className="card bg-base-100 p-4 shadow-sm">
       <figure>
@@ -42,11 +50,7 @@ const PlayerCard = ({ player, setAvailableBalance, availableBalance }) => {
           <button
             disabled={isSelected}
             onClick={() => {
-              setIsSelected(true);
-              setAvailableBalance(
-                availableBalance -
-                  player.price.split("USD").join("").split(",").join("")
-              );
+              handleSelected(player);
             }}
             className="btn hover:bg-sky-400 hover:text-white"
           >
