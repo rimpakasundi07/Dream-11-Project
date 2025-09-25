@@ -20,7 +20,7 @@ const Banner = () => {
                 Assemble Your Ultimate Dream 11 Cricket Team
               </h1>
               <p className="">Beyond Boundaries Beyond Limits</p>
-              <button className="bg-[#E7FE29] text-semibold rounded-md px-3 py-1 text-black ">
+              <button className="bg-[#E7FE29] font-semibold text-semibold rounded-md px-3 py-1 text-black ">
                 Claim Free Credit
               </button>
             </div>
