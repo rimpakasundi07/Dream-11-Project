@@ -1,7 +1,7 @@
 import React from "react";
 
 const SelectedPlayer = () => {
-  return <div className="container mx-auto px-8">selected</div>;
+  return <div className="">selected</div>;
 };
 
 export default SelectedPlayer;
