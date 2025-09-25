@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 
 import Availableplayers from "./components/AvailablePlayers/Availableplayers";
 import SelectedPlayer from "./components/AvailablePlayers/SelectedPlayers/SelectedPlayer";
@@ -14,6 +14,7 @@ const fetchPlayers = async () => {
 };
 
 function App() {
+  const [toggle, setToggle] = useState(true);
   const playersPromise = fetchPlayers();
   return (
     <>
@@ -22,20 +23,35 @@ function App() {
       <div className=" px-8 container mx-auto flex justify-between items-center ">
         <h1 className="font-bold lg:text-3xl text-xl">Available Players</h1>
         <div>
-          <button className="py-2 px-4 border-2 font-semibold bg-[#E7FE29] border-r-0 border-gray-300 rounded-l-xl ">
+          <button
+            onClick={() => setToggle(true)}
+            className={`py-2 px-4 border-2 font-semibold ${
+              toggle === true ? "bg-[#E7FE29]" : ""
+            } border-r-0 border-gray-300 rounded-l-xl`}
+          >
             Available
           </button>
-          <button className="py-2 px-4 border-2 border-l-0 border-gray-300 rounded-r-xl">
+          <button
+            onClick={() => setToggle(false)}
+            className={`py-2 px-4 border-2 border-l-0  ${
+              toggle === false ? "bg-[#E7FE29]" : ""
+            } border-gray-300 rounded-r-xl`}
+          >
             Selected <span>({0})</span>
           </button>
         </div>
       </div>
-      <Suspense
-        fallback={<span className="Loading loading-spinner loading-xl"></span>}
-      >
-        <Availableplayers playersPromise={playersPromise} />
-      </Suspense>
-      <SelectedPlayer />
+      {toggle === true ? (
+        <Suspense
+          fallback={
+            <span className="Loading loading-spinner loading-xl"></span>
+          }
+        >
+          <Availableplayers playersPromise={playersPromise} />
+        </Suspense>
+      ) : (
+        <SelectedPlayer />
+      )}
     </>
   );
 }
