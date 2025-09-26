@@ -13,8 +13,7 @@ const PlayerCard = ({
 
   const handleSelected = (playerData) => {
     const playerPrice = parseInt(
-      availableBalance -
-        playerData.price.split("USD").join("").split(",").join("")
+      playerData.price.split("USD").join("").split(",").join("")
     );
 
     if (availableBalance < playerPrice) {

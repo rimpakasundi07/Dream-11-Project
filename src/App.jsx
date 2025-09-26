@@ -10,7 +10,7 @@ import Banner from "./components/AvailablePlayers/Banner/Banner";
 const fetchPlayers = async () => {
   const res = await fetch("/players.json");
   const data = await res.json();
-  // console.log(data);
+  console.log(data);
   return data;
 };
 
@@ -26,7 +26,11 @@ function App() {
       <Navbar availableBalance={availableBalance} />
       <Banner />
       <div className=" px-8 container mx-auto flex justify-between items-center ">
-        <h1 className="font-bold lg:text-3xl text-xl">Available Players</h1>
+        <h1 className="font-bold lg:text-3xl text-xl">
+          {toggle === true
+            ? "Available Players"
+            : `Selected Players(${purchasedPlayers.length}/6)`}
+        </h1>
         <div>
           <button
             onClick={() => setToggle(true)}
@@ -54,7 +58,7 @@ function App() {
         >
           <Availableplayers
             purchasedPlayers={purchasedPlayers}
-            setPurchasedPlayer={setPurchasedPlayers}
+            setPurchasedPlayers={setPurchasedPlayers}
             availableBalance={availableBalance}
             setAvailableBalance={setAvailableBalance}
             playersPromise={playersPromise}
