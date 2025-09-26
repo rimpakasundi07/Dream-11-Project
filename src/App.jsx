@@ -10,7 +10,7 @@ import Banner from "./components/AvailablePlayers/Banner/Banner";
 const fetchPlayers = async () => {
   const res = await fetch("/players.json");
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
   return data;
 };
 
@@ -19,6 +19,7 @@ const playersPromise = fetchPlayers();
 function App() {
   const [toggle, setToggle] = useState(true);
   const [availableBalance, setAvailableBalance] = useState(6000000000);
+  const [purchasedPlayers, setPurchasedPlayers] = useState([]);
 
   return (
     <>
@@ -52,13 +53,15 @@ function App() {
           }
         >
           <Availableplayers
+            purchasedPlayers={purchasedPlayers}
+            setPurchasedPlayer={setPurchasedPlayers}
             availableBalance={availableBalance}
             setAvailableBalance={setAvailableBalance}
             playersPromise={playersPromise}
           />
         </Suspense>
       ) : (
-        <SelectedPlayer />
+        <SelectedPlayer purchasedPlayers={purchasedPlayers} />
       )}
     </>
   );

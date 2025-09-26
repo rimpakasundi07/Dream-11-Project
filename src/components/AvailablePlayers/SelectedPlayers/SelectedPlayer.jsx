@@ -1,7 +1,8 @@
 import React from "react";
 
-const SelectedPlayer = () => {
-  return <div className="">selected</div>;
+const SelectedPlayer = ({ purchasedPlayers }) => {
+  console.log(purchasedPlayers);
+  return <div className="px-8">selected</div>;
 };
 
 export default SelectedPlayer;

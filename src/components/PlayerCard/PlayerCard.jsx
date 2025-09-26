@@ -2,16 +2,32 @@ import React, { useState } from "react";
 import flagImg from "../../assets/icons8-flag-50.png";
 import userImg from "../../assets/icons8-user-50.png";
 
-const PlayerCard = ({ player, setAvailableBalance, availableBalance }) => {
+const PlayerCard = ({
+  player,
+  setAvailableBalance,
+  availableBalance,
+  setPurchasedPlayers,
+  purchasedPlayers,
+}) => {
   const [isSelected, setIsSelected] = useState(false);
 
   const handleSelected = (playerData) => {
-    setIsSelected(true);
-    setAvailableBalance(
+    const playerPrice = parseInt(
       availableBalance -
         playerData.price.split("USD").join("").split(",").join("")
     );
+
+    if (availableBalance < playerPrice) {
+      alert("Not enough coins !!");
+      return;
+    }
+
+    setIsSelected(true);
+    setAvailableBalance(availableBalance - playerPrice);
+
+    setPurchasedPlayers([...purchasedPlayers, playerData]);
   };
+
   return (
     <div className="card bg-base-100 p-4 shadow-sm">
       <figure>
