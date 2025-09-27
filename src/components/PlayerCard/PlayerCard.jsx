@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import flagImg from "../../assets/icons8-flag-50.png";
 import userImg from "../../assets/icons8-user-50.png";
+import { toast } from "react-toastify";
 
 const PlayerCard = ({
   player,
@@ -17,7 +18,7 @@ const PlayerCard = ({
     );
 
     if (availableBalance < playerPrice) {
-      alert("Not enough coins !!");
+      toast("Not enough coins !!");
       return;
     }
 
