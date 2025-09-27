@@ -1,9 +1,12 @@
 import React from "react";
 
-const SelectedCard = ({ player }) => {
+const SelectedCard = ({ player, removePlayer }) => {
   console.log(player);
+  const handleRemove = () => {
+    removePlayer(player);
+  };
   return (
-    <div className="border-2 rounded-xl mt-5 border-gray-300 p-3 flex justify-between">
+    <div className="border-2 rounded-xl mt-5 border-gray-300 p-3 flex items-center justify-between">
       <div className="flex items-center">
         <img
           src={player.player_image}
@@ -15,7 +18,7 @@ const SelectedCard = ({ player }) => {
           <p className="text-xs">{player.batting_style}</p>
         </div>
       </div>
-      <div>
+      <div onClick={handleRemove}>
         <img src="https://i.ibb.co/tPKHJz3c/Frame.png" alt="" />{" "}
       </div>
     </div>

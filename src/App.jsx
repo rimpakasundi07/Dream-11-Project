@@ -21,6 +21,18 @@ function App() {
   const [availableBalance, setAvailableBalance] = useState(6000000000);
   const [purchasedPlayers, setPurchasedPlayers] = useState([]);
 
+  const removePlayer = (p) => {
+    const filterdata = purchasedPlayers.filter(
+      (ply) => ply.player_name !== p.player_name
+    );
+    console.log(p);
+    setPurchasedPlayers(filterdata);
+    setAvailableBalance(
+      availableBalance +
+        parseInt(p.price.split("USD").join("").split(",").join(""))
+    );
+  };
+
   return (
     <>
       <Navbar availableBalance={availableBalance} />
@@ -46,7 +58,7 @@ function App() {
               toggle === false ? "bg-[#E7FE29]" : ""
             } border-gray-300 rounded-r-xl`}
           >
-            Selected <span>({0})</span>
+            Selected <span>({purchasedPlayers.length})</span>
           </button>
         </div>
       </div>
@@ -65,7 +77,10 @@ function App() {
           />
         </Suspense>
       ) : (
-        <SelectedPlayer purchasedPlayers={purchasedPlayers} />
+        <SelectedPlayer
+          removePlayer={removePlayer}
+          purchasedPlayers={purchasedPlayers}
+        />
       )}
     </>
   );
